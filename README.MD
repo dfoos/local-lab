@@ -51,18 +51,17 @@ Before using these scripts, make sure you have the following installed and confi
 
 ### Step 1 - Clone this repo
 ```bash
-git clone https://github.com/dfoos/local-lab.git                                                                                                       
-                                                                                                       
+git clone https://github.com/dfoos/local-lab.git
+```                                                                                                                                                                                
 ### Step 2 - Run bootsrap.ps1
 1. Navigate to the `powershell/` directory.
-2. Run the PowerShell bootstrap script:
-                                                                                                       
+2. Run the PowerShell bootstrap script:                                                                                               
 ```powershell
 ./bootstrap.ps1
-                                                                                                       
+```                                                                                                       
 ### Step 3 - Build Packer image
 1. Navigate to the newly create `local/` directory.
-2. Run the Packer build command:
-                                                                                                       
+2. Run the Packer build command:                                                                                               
 ```bash
 packer build -var vm_name=rocky-linux-9-4-gm packer/rocky-linux-9.4.pkr.hcl
+```
