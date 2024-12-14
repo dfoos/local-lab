@@ -63,5 +63,5 @@ git clone https://github.com/dfoos/local-lab.git
 1. Navigate to the newly create `local/` directory.
 2. Run the Packer build command:                                                                                               
 ```bash
-packer build -var vm_name=rocky-linux-9-4-gm packer/rocky-linux-9.4.pkr.hcl
+packer build -var vm_name=rocky-gm packer/rocky-linux-9.4.pkr.hcl
 ```
