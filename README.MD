@@ -42,8 +42,8 @@ Contains **miscellaneous PowerShell scripts** that help in automating common tas
 Before using these scripts, make sure you have the following installed and configured:
 
 - **VirtualBox**: Ansible Tower that is deployed in the K3s cluster to automate jobs.
+- **GitHub Repo**: Required to AWX templates.
 - **GitHub PAT (Personal Access Token)**: Required to authenticate with GitHub for any SCM operations (if using GitHub for playbook or project retrieval).
-
 
 ---
 
