@@ -49,19 +49,27 @@ Before using these scripts, make sure you have the following installed and confi
 
 ## Usage
 
-### Step 1 - Clone this repo
+### Build a Rocky Linux GM (VirtualBox Appliance)
+
+#### Step 1 - Clone this repo
 ```bash
 git clone https://github.com/dfoos/local-lab.git
 ```                                                                                                                                                                                
-### Step 2 - Run bootsrap.ps1
+#### Step 2 - Run bootsrap.ps1
 1. Navigate to the `powershell/` directory.
 2. Run the PowerShell bootstrap script:                                                                                               
 ```powershell
 ./bootstrap.ps1
 ```                                                                                                       
-### Step 3 - Build Packer image
+#### Step 3 - Build Packer image
 1. Navigate to the newly create `local/` directory.
 2. Run the Packer build command:                                                                                               
 ```bash
-packer build -var vm_name=rocky-gm packer/rocky-linux-9.4.pkr.hcl
+packer build -var vm_name=rocky-linux-9-4-gm packer/rocky-linux-9.4.pkr.hcl
+```
+#### Step 4 - Convert Packer VM to VirtualBox Appliance
+1. Navigate to the newly create `local/` directory.
+2. Run the following commands:                                                                                               
+```bash
+packer build -var vm_name=rocky-linux-9-4-gm packer/rocky-linux-9.4.pkr.hcl
 ```
