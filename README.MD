@@ -63,9 +63,10 @@ git clone https://github.com/dfoos/local-lab.git
 ```                                                                                                       
 #### Step 3 - Build Packer image
 1. Navigate to the newly create `local/` directory.
-2. Run the Packer build command:                                                                                               
+2. Run the Packer init and then the build command:                                                                                               
 ```bash
-packer build -var vm_name=rocky-linux-9-4-gm packer/rocky-linux-9.4.pkr.hcl
+./packer.exe init ../packer/rocky-linux-9.4.pkr.hcl
+./packer build -var vm_name=rocky-linux-9-4-gm ../packer/rocky-linux-9.4.pkr.hcl
 ```
 #### Step 4 - Convert Packer VM to VirtualBox Appliance
 1. Navigate to the newly create `local/` directory.
