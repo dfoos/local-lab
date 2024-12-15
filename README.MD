@@ -68,10 +68,3 @@ git clone https://github.com/dfoos/local-lab.git
 ./packer.exe init ../packer/rocky-linux-9.4.pkr.hcl
 ./packer build -var vm_name=rocky-linux-9-4-gm ../packer/rocky-linux-9.4.pkr.hcl
 ```
-#### Step 4 - Convert Packer VM to VirtualBox Appliance
-1. Navigate to the newly create `local/` directory.
-2. Run the following commands:                                                                                               
-```bash
-packer init ../packer/rocky-linux-9.4.pkr.hcl
-packer build -var vm_name=rocky-linux-9-4-gm ../packer/rocky-linux-9.4.pkr.hcl
-```
