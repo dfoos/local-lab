@@ -34,7 +34,7 @@
 # Variables for easier configuration
 variable "iso_url" {
   type    = string
-  default = "https://dl.rockylinux.org/vault/rocky/9.4/isos/x86_64/Rocky-9.4-x86_64-dvd.iso"
+  default = "Rocky-9.4-x86_64-dvd.iso"
 }
 
 variable "iso_checksum" {
@@ -91,7 +91,7 @@ source "virtualbox-iso" "rocky_linux" {
   ssh_timeout       = "15m"     # Timeout for SSH connection
 
   # HTTP directory for Kickstart file
-  http_directory    = "http"
+  http_directory    = "../packer/http"
 
   # Boot command to automatically pass the kickstart file to the installer
   boot_command = [
@@ -109,13 +109,13 @@ build {
   # Copy packer public key to GM
   # Created with ssh-keygen -b 2048 -t rsa -C 'packer' -f packer
   provisioner "file" {
-  source = "packer.pub"
+  source = "packer-key.pub"
   destination = "/tmp/packer.pub"
 }
 
 
   # Provisioning script to set up the system after boot
   provisioner "shell" {
-    script = "scripts/rocky9_setup.sh"
+    script = "../packer/scripts/rocky9_setup.sh"
   }
 }
