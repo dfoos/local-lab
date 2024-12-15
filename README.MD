@@ -71,5 +71,6 @@ packer build -var vm_name=rocky-linux-9-4-gm packer/rocky-linux-9.4.pkr.hcl
 1. Navigate to the newly create `local/` directory.
 2. Run the following commands:                                                                                               
 ```bash
-packer build -var vm_name=rocky-linux-9-4-gm packer/rocky-linux-9.4.pkr.hcl
+packer init ../packer/rocky-linux-9.4.pkr.hcl
+packer build -var vm_name=rocky-linux-9-4-gm ../packer/rocky-linux-9.4.pkr.hcl
 ```
