@@ -109,7 +109,7 @@ build {
   # Copy packer public key to GM
   # Created with ssh-keygen -b 2048 -t rsa -C 'packer' -f packer
   provisioner "file" {
-  source = "packer-key.pub"
+  source = "../local/packer-key.pub"
   destination = "/tmp/packer.pub"
 }
 
